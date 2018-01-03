@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from .forms import DocumentForm
 
 
-def modelFormUpload(request):
+def model_Form_Upload(request):
 
     form = DocumentForm(request.POST, request.FILES)
 
@@ -18,7 +18,7 @@ def modelFormUpload(request):
     return render(request, 'app/upload.html', {'form': form})
 
 
-def feedFunction(request):
+def feed_Function(request):
     pictures = [{
         'url': picture.photo.url.replace('app/Static', ''),
         'id': picture.id

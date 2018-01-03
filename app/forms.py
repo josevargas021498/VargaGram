@@ -1,5 +1,5 @@
 from django import forms
-from .models import Feed
+from .models import DocumentForm
 
 
 class DocumentForm(forms.ModelForm):

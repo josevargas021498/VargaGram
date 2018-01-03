@@ -2,6 +2,6 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('upload/', views.modelFormUpload, name='base'),
-    path('feed/', views.feedFunction, name='feed'),
+    path('upload/', views.model_Form_Upload, name='base'),
+    path('feed/', views.feed_Function, name='feed'),
 ]
