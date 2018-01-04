@@ -19,8 +19,13 @@ def model_Form_Upload(request):
 
 
 def feed_Function(request):
-    pictures = [{
-        'url': picture.photo.url.replace('app/Static', ''),
-        'id': picture.id
-    }]
-    return render(request, 'app/feed.html', {'pictures': pictures})
+
+    picture_objects = models.DocumentForm.objects.all().order_by(
+        '-uploaded_at')
+
+    # pictures = [{
+    #     'url': picture.photo.url.replace('app/Static', ''),
+    #     'id': picture.id
+    # }]
+    return render(request, 'app/feed.html',
+                  {'picture_objects': picture_objects})
